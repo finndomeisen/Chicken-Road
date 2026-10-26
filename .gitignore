@@ -2,3 +2,7 @@ node_modules/
 target/
 frontend/dist/
 data/
+/backend/backend.exe
+/backend/coverage.out
+/backend/coverage.txt
+/backend/test-results.jsonl

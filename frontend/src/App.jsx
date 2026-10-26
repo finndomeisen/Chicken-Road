@@ -233,6 +233,7 @@ function App() {
 function getErrorMessage(error) {
   const responseMessage = error.response?.data;
   if (typeof responseMessage === 'string' && responseMessage) return responseMessage;
+  if (typeof responseMessage?.error === 'string') return responseMessage.error;
   if (typeof responseMessage?.detail === 'string') return responseMessage.detail;
   if (error instanceof Error && error.message === 'Network Error') {
     return 'Der Server ist nicht erreichbar. Prüfe, ob das Backend gestartet ist.';
